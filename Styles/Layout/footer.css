@@ -1,0 +1,65 @@
+footer {
+    background-color: var(--primaryColor);
+    width: 100%;
+    padding: clamp(1.2rem, 5vw, 5rem);
+    display: flex;
+    justify-content: space-between;
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        a, p {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            color: var(--lightColor);
+            gap: 1rem;
+        }
+
+        a {
+            max-width: fit-content;
+        }
+
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+
+        a {
+            padding: .5rem;
+            color: var(--lightColor);
+        }
+    }
+
+    .brandLogo{
+    img{
+        height: clamp(5rem, 4vw, 7rem);
+    }
+}
+
+.brandName{
+    font-size: clamp(1.8rem, 3vw,3rem);
+    line-height: 1.1;
+    letter-spacing: clamp(.3rem, 1.5vw, .8rem);
+
+    span{
+        font-size: clamp(.75rem, 1.25vw, .9rem);
+        letter-spacing: .5rem;
+    }
+}
+
+}
+
+
+@media (max-width: 425px) {
+    footer{
+        flex-direction: column;
+    }
+    
+}
+
+

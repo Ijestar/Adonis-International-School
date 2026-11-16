@@ -1,0 +1,27 @@
+@import url('/Styles/base.css');
+
+button, .submit{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: fit-content;
+    background-color: var(--primaryColor);
+    border: none;
+    padding: 1rem 1.5rem;
+    color: var(--lightColor);
+    box-shadow: var(--buttonShadow);
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+
+    svg{
+        fill: var(--lightColor);
+    }
+
+    &:hover{
+        background-color: var(--primaryHover);
+        transform: var(--transform);
+    }
+}

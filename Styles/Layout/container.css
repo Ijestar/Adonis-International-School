@@ -1,0 +1,89 @@
+@import url(/Styles/Components/buttons.css);
+
+h1{
+    color: var(--primaryColor);
+}
+
+.formContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin-top: 2em;
+    min-width: 500px;
+}
+
+.inputGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.inputGroup label{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--primaryColor);
+}
+
+.inputGroup input, .inputGroup textarea{
+    border: none;
+    background-color: var(--bgColor);
+    border-bottom: 1px solid var(--primaryColor);
+}
+
+
+.sideCard{
+    background-color: var(--primaryColor);
+    border-radius: 30px;
+    width: 400px;
+    height: fit-content;
+    padding: 1rem;
+}
+
+.actionDetails{
+    background-color: var(--bgColor);
+    color: var(--primaryColor);
+    padding: 3em 6em;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.icons{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.iconGroup{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    svg{
+        fill: var(--primaryColor);
+    }
+
+    a{
+        color: var(--lightColor);
+
+    }
+}
+
+.iconOutline{
+    width: 40px;
+    height: 40px;
+    background-color: var(--bgColor);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    color: var(--primaryColor);
+
+}

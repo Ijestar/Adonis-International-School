@@ -1,0 +1,257 @@
+body {
+    background-color: var(--bgColor);
+    width: 100%;
+}
+
+section,
+main {
+    padding: clamp(1.2rem, 5vw, 5rem);
+    width: 100%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+
+    background-image:
+
+        url(/assets/Images/heroBG.jpeg);
+
+    p {
+        font-weight: 500;
+    }
+
+    a {
+        transition: none;
+
+        &:hover {
+            transform: none;
+        }
+    }
+
+
+}
+
+h1 {
+    font-size: clamp(3.6rem, 5vw + 1.6rem, 6.4rem);
+    line-height: 1.1;
+    font-weight: 800;
+    color: var(--primaryColor);
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    color: var(--primaryColor);
+    font-size: clamp(2rem, 2.5vw + 1rem, 3rem);
+}
+
+h3 {
+    padding: 0 2rem;
+    color: var(--primaryColor);
+    font-size: clamp(1.75rem, 2vw + 1rem, 2.5rem);
+}
+
+p {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    font-weight: 400;
+    color: var(--primaryColor);
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+.imgContainer {
+    border-radius: .5rem .5rem 000;
+    overflow: hidden;
+    margin-bottom: 2rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--primaryColor);
+    font-size: 1.1rem;
+    transition: var(--transition);
+
+    &:hover {
+        transform: var(--transform);
+    }
+}
+
+.bragsContainer {
+    display: grid;
+    background-color: var(--primaryColor);
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: clamp(.72rem, 5vw, 2rem);
+    position: relative;
+    top: 10rem;
+}
+
+.bragCard {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+
+    p {
+        display: flex;
+        flex-direction: column;
+        color: var(--lightColor);
+        width: 65%;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+}
+
+.iconOutline {
+    border: 2px solid var(--lightColor);
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        fill: var(--lightColor);
+    }
+}
+
+.aboutSchool {
+    padding: clamp(3rem, 7vw, 7rem) clamp(1.2rem, 5vw, 5rem);
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+
+    .aboutCard {
+        background-color: var(--bgColor);
+        box-shadow: var(--cardShadow);
+        border-radius: .5rem;
+        display: flex;
+        flex-direction: column;
+        transition: var(--transition);
+
+        .imgContainer {
+            width: 100%;
+            height: 15rem;
+        }
+
+
+
+        p {
+            padding: 2rem;
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+            color: var(--primaryColor);
+
+            a {
+                margin-top: 1rem;
+                color: var(--secondaryColor);
+                font-weight: 500;
+
+                &:hover {
+                    color: var(--secondaryHover);
+                }
+            }
+        }
+
+        &:hover {
+            transform: var(--transform);
+        }
+    }
+}
+
+.quote {
+    background-color: var(--primaryColor);
+    display: flex;
+    flex-direction: column;
+
+    p,
+    span {
+        color: var(--lightColor);
+    }
+
+    span {
+        align-self: flex-end;
+    }
+}
+
+.chooseUs {
+    li {
+        font-size: 1.2rem;
+        color: var(--primaryColor);
+        font-weight: 500;
+    }
+}
+
+
+.school {
+    display: flex;
+    box-shadow: var(--cardShadow);
+    align-items: center;
+    gap: 2rem;
+    max-width: 120rem;
+    margin: 3rem auto;
+    
+    .imgContainer{
+        flex: 1;
+        min-width: 0;
+        min-height: 25rem;
+        border-radius: 1.5rem;
+    }
+
+    .sectionDetails {
+        min-width: 0;
+        flex: 1;
+    }
+
+}
+@media screen and (max-width: 768px){
+    .school{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.25rem;
+        margin: 1.5rem auto;
+        padding: 1rem;
+    }
+
+    .imgContainer{
+         order: -1;
+         width: 100%;
+         min-height: 22rem;
+         flex: none;
+    }
+
+    .sectionDetails{
+        width: 100%;
+    }
+}
+
+@media (max-width:1000px) {
+    .bragsContainer {
+        top: 3rem;
+    }
+
+    .aboutSchool {
+        padding: clamp(1rem, 3vw, 3rem) clamp(1.2rem, 5vw, 5rem);
+    }
+}

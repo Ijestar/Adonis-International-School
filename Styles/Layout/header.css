@@ -1,0 +1,142 @@
+@import url('/Styles/base.css');
+
+header {
+    width: 100%;
+    height: clamp(10rem, 8vw, 14rem);
+    background-color: var(--primaryColor);
+    display: flex;
+    align-items: center;
+    padding: clamp(.5rem, 1vh, 5rem) clamp(1.2rem, 5vw, 5rem);
+
+    nav {
+        position: absolute;
+        top: clamp(5rem, 4vw, 7rem);
+        right: clamp(1.2rem, 5vw, 5rem);
+    }
+}
+
+.brandGroup {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.brandLogo {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: auto;
+        height: clamp(8rem, 6vw, 12rem);
+    }
+}
+
+.brandName {
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    font-weight: 800;
+    color: var(--lightColor);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    letter-spacing: clamp(.3rem, 1.5vw, .8rem);
+    margin-left: 2rem;
+
+    span {
+        font-size: clamp(.9rem, 1.6vw, 1rem);
+        font-weight: 600;
+        letter-spacing: .5rem;
+    }
+}
+
+
+
+.listContainer {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+
+    .title {
+        text-decoration: none;
+        color: var(--lightColor);
+        font-size: 1.3rem;
+        cursor: pointer;
+        height: 2rem;
+        font-weight: 700;
+        transition: var(--transition);
+
+        &:hover {
+            color: var(--lightHover);
+            transform: var(--transform);
+        }
+    }
+
+    .content {
+        background-color: var(--lightColor);
+        padding: 1.5rem 1rem;
+        display: none;
+        flex-direction: column;
+        gap: 1.5rem;
+        position: absolute;
+        box-shadow: var(--shadow);
+        border-radius: 0 0 .5rem .5rem;
+        top: 2rem;
+
+        a {
+            font-weight: 600;
+
+            &:hover {
+                color: var(--lightHover);
+            }
+        }
+    }
+
+    .dropDown {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .dropDown:hover {
+        .content {
+            display: flex;
+        }
+    }
+}
+
+#sidebarActive,
+.opensidebar,
+.closesidebar {
+    display: none;
+}
+
+@media(max-width:725px) {
+
+    .listContainer {
+        flex-direction: column;
+        background-color: var(--primaryColor);
+        width: 50vw;
+        height: 100vh;
+        z-index: 95;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        padding: 2rem;
+        box-sizing: var(--shadow);
+        transition: var(--transition);
+    }
+
+    .opensidebar,
+    .closesidebar {
+        display: block;
+    }
+
+    .opensidebar {
+        position: relative;
+        top: -3rem;
+    }
+
+    #sidebarActive:checked~.listContainer {
+        right: 0;
+    }
+
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities | Adonis International School</title>
+    <link rel="stylesheet" href="/Styles/base.css">
+    <link rel="stylesheet" href="/Styles/Layout/header.css">
+    <link rel="stylesheet" href="/Styles/main.css">
+    <link rel="stylesheet" href="/Styles/Components/gallery.css">
+    <link rel="stylesheet" href="/Styles/Layout/footer.css">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <section class="gallery">
+        <div class="galleryHeader">
+            <h2>Life at Adonis</h2>
+            <p>A glimpse into the activities that shape confident, creative and well-rounded students.</p>
+            <div class="galleryFilters">
+                <button class="active" data-filter="all">All</button>
+                <button data-filter="sports">Sports</button>
+                <button data-filter="events">Events</button>
+            </div>
+        </div>
+
+        <div class="galleryGrid">
+            <figure class="galleryItem" data-category="sports" tabindex="0">
+                <img src="/assets/Images/BlueHouse.png" alt="Students playing football" loading="lazy">
+                <figcaption>Inter-House Sports <span>Sports</span></figcaption>
+            </figure>
+            <figure class="galleryItem" data-category="events" tabindex="0">
+                <img src="/assets/Images/students pic.jpeg" alt="Graduation ceremony" loading="lazy">
+                <figcaption>Graduation Day <span>Events</span></figcaption>
+            </figure>
+        </div>
+
+        <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+            <button class="lightboxBtn lightboxClose" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+            </button>
+            <button class="lightboxBtn lightboxPrev" aria-label="Previous image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
+                </svg>
+            </button>
+            <figure>
+                <img src="" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <button class="lightboxBtn lightboxNext" aria-label="Next image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
+                </svg>
+            </button>
+        </dialog>
+
+        <dialog class="carouselModal" id="carouselModal" aria-label="Activity gallery">
+            <div class="carouselTop">
+                <h3 id="carouselTitle"></h3>
+                <button class="carouselClose" id="carouselClose" aria-label="Close gallery">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="carouselStage">
+                <button class="carouselBtn carouselPrev" aria-label="Previous image">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="flip">
+                        <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
+                    </svg>
+                </button>
+                <div class="carouselTrack" id="carouselTrack"></div>
+                <button class="carouselBtn carouselNext" aria-label="Next image">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                        <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
+                    </svg>
+                </button>
+            </div>
+
+            <p class="carouselCaption" id="carouselCaption"></p>
+            <div class="carouselDots" id="carouselDots"></div>
+        </dialog>
+    </section>
+
+    <div id="footer"></div>
+
+    <script type="module" src="/scripts/gallery.js"></script>
+    <script type="module" src="/scripts/components.js"></script>
+
+</body>
+
+</html>

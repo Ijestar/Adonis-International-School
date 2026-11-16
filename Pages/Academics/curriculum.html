@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum | Adonis International School</title>
+    <link rel="stylesheet" href="/Styles/base.css">
+    <link rel="stylesheet" href="/Styles/main.css">
+    <link rel="stylesheet" href="/Styles/Layout/header.css">
+    <link rel="stylesheet" href="/Styles/Layout/footer.css">
+    <link rel="stylesheet" href="/Styles/Components/buttons.css">
+    <link rel="stylesheet" href="/Styles/Pages/curriculum.css">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <section class="pageHero">
+        <h1>Our Curriculum</h1>
+        <p>A balanced, child-centered programme that builds strong academic foundations, character and confidence
+            from Crèche to Secondary.</p>
+        <nav class="pageLinks" aria-label="On this page">
+            <a href="#calendar">Academic Calendar</a>
+            <a href="#subjects">Subjects Offered</a>
+        </nav>
+    </section>
+
+    <!-- ACADEMIC CALENDAR -->
+    <section class="calendar" id="calendar">
+        <div class="sectionHead">
+            <h2>Academic Calendar 2026/2027</h2>
+            <p>Key dates for the current session. Dates may be adjusted by the school or government; any change will be
+                communicated to parents.</p>
+            <ul class="legend">
+                <li><span class="dot term"></span>Term dates</li>
+                <li><span class="dot exam"></span>Tests &amp; exams</li>
+                <li><span class="dot break"></span>Breaks &amp; holidays</li>
+                <li><span class="dot event"></span>School events</li>
+            </ul>
+        </div>
+
+        <div class="termGrid">
+            <article class="termCard">
+                <header class="termHead">
+                    <h3>First Term</h3>
+                    <span>07 Sep – 11 Dec 2026</span>
+                </header>
+                <ul class="timeline">
+                    <li class="term"><time>07 Sep</time><p>Resumption of First Term</p></li>
+                    <li class="event"><time>1 Oct</time><p>Independence Day Celebration</p></li>
+                    <li class="break"><time>23 – 26 Oct</time><p>Mid-term break</p></li>
+                    <li class="exam"><time>30 Nov – 11 Dec</time><p>First Term examinations</p></li>
+                    <li class="break"><time>11 Dec</time><p>Vacation begins</p></li>
+                </ul>
+            </article>
+
+            <article class="termCard">
+                <header class="termHead">
+                    <h3>Second Term</h3>
+                    <span>04 Jan – 25 March 2027</span>
+                </header>
+                <ul class="timeline">
+                    <li class="term"><time>4 Jan</time><p>Resumption of Second Term</p></li>
+                    <li class="event"><time>Feb</time><p>Cultural Day</p></li>
+                    <li class="break"><time>12 – 15 Feb</time><p>Mid-term break</p></li>
+                    <li class="exam"><time>Late Mar</time><p>Second Term examinations</p></li>
+                    <li class="break"><time>26 – 29 March</time><p>Easter &amp; Sallah break</p></li>
+                </ul>
+            </article>
+
+            <article class="termCard">
+                <header class="termHead">
+                    <h3>Third Term</h3>
+                    <span>Apr – Jul 2027</span>
+                </header>
+                <ul class="timeline">
+                    <li class="term"><time>19 Apr</time><p>Resumption of Third Term</p></li>
+                    <li class="break"><time>28 – 31 May</time><p>Mid-term break</p></li>
+                    <li class="exam"><time>Jul</time><p>Third Term / promotion examinations</p></li>
+                    <li class="event"><time>16 Jul</time><p>Graduation &amp; Prize-Giving Day</p></li>
+                    <li class="break"><time>16 Jul</time><p>Long vacation begins</p></li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- SUBJECTS -->
+    <section class="subjects" id="subjects">
+        <div class="sectionHead">
+            <h2>Subjects Offered</h2>
+            <p>Choose a section to see what our students study.</p>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="School sections">
+            <button role="tab" id="tab-creche" aria-controls="panel-creche" aria-selected="true">Crèche</button>
+            <button role="tab" id="tab-nursery" aria-controls="panel-nursery" aria-selected="false">Nursery</button>
+            <button role="tab" id="tab-primary" aria-controls="panel-primary" aria-selected="false">Primary</button>
+            <button role="tab" id="tab-secondary" aria-controls="panel-secondary" aria-selected="false">Secondary</button>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-creche" aria-labelledby="tab-creche">
+            <p class="panelIntro">Play-based early learning that builds language, movement and social skills.</p>
+            <ul class="subjectList">
+                <li>Language &amp; Communication</li>
+                <li>Number Readiness</li>
+                <li>Sensory &amp; Exploratory Play</li>
+                <li>Rhymes &amp; Songs</li>
+                <li>Motor Skills</li>
+                <li>Creative Art &amp; Craft</li>
+                <li>Social &amp; Emotional Development</li>
+                <li>Religious Studies</li>
+            </ul>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-nursery" aria-labelledby="tab-nursery" hidden>
+            <p class="panelIntro">Foundational literacy and numeracy, taught through activity and discovery.</p>
+            <ul class="subjectList">
+                <li>Letter Work &amp; Phonics</li>
+                <li>Number Work</li>
+                <li>Handwriting</li>
+                <li>Reading Readiness</li>
+                <li>Nature &amp; Science Study</li>
+                <li>Social Habits</li>
+                <li>Health Habits</li>
+                <li>Rhymes &amp; Poems</li>
+                <li>Creative Arts</li>
+                <li>Physical Education</li>
+                <li>Religious Studies</li>
+            </ul>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-primary" aria-labelledby="tab-primary" hidden>
+            <p class="panelIntro">A broad core curriculum that develops strong reasoning, communication and creativity.</p>
+            <ul class="subjectList">
+                <li>English Language</li>
+                <li>Mathematics</li>
+                <li>Basic Science &amp; Technology</li>
+                <li>Social Studies</li>
+                <li>Civic Education</li>
+                <li>Verbal Reasoning</li>
+                <li>Quantitative Reasoning</li>
+                <li>Computer Studies</li>
+                <li>Agricultural Science</li>
+                <li>Home Economics</li>
+                <li>Cultural &amp; Creative Arts</li>
+                <li>Physical &amp; Health Education</li>
+                <li>French</li>
+                <li>Nigerian Language</li>
+                <li>Religious Studies</li>
+            </ul>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-secondary" aria-labelledby="tab-secondary" hidden>
+            <p class="panelIntro">A rigorous programme that prepares students for external examinations and higher education.</p>
+
+            <h4>Junior Secondary</h4>
+            <ul class="subjectList">
+                <li>English Language</li>
+                <li>Mathematics</li>
+                <li>Basic Science</li>
+                <li>Basic Technology</li>
+                <li>Computer Science</li>
+                <li>Social Studies</li>
+                <li>Civic Education</li>
+                <li>Business Studies</li>
+                <li>Agricultural Science</li>
+                <li>Home Economics</li>
+                <li>Cultural &amp; Creative Arts</li>
+                <li>Physical &amp; Health Education</li>
+                <li>French</li>
+                <li>Literature in English</li>
+                <li>Christian Religious Studies</li>
+            </ul>
+
+            <h4>Senior Secondary: Core</h4>
+            <ul class="subjectList">
+                <li>English Language</li>
+                <li>General Mathematics</li>
+                <li>Civic Education</li>
+                <li>Data Processing</li>
+            </ul>
+
+            <h4>Senior Secondary: Science</h4>
+            <ul class="subjectList">
+                <li>Physics</li>
+                <li>Chemistry</li>
+                <li>Biology</li>
+                <li>Further Mathematics</li>
+                <li>Agricultural Science</li>
+                <li>Technical Drawing</li>
+                <li>Geography</li>
+            </ul>
+
+            <h4>Senior Secondary: Commercial</h4>
+            <ul class="subjectList">
+                <li>Financial Accounting</li>
+                <li>Commerce</li>
+                <li>Economics</li>
+                <li>Marketing</li>
+            </ul>
+
+            <h4>Senior Secondary: Arts &amp; Humanities</h4>
+            <ul class="subjectList">
+                <li>Literature in English</li>
+                <li>Government</li>
+                <li>Christian Religious Studies</li>
+            </ul>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script type="module" src="/scripts/components.js"></script>
+    <script type="module" src="/scripts/curriculum.js"></script>
+</body>
+
+</html>
