@@ -34,16 +34,26 @@ module.exports = async function contact(request, response) {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ ...submission, secret: sharedSecret })
         });
-        const result = await upstreamResponse.json();
+        const responseBody = await upstreamResponse.text();
+        let result;
+
+        try {
+            result = JSON.parse(responseBody);
+        } catch {
+            console.error(`Contact form Apps Script returned non-JSON (HTTP ${upstreamResponse.status}).`);
+            return response.status(502).json({ message: "The Google Sheets service returned an unexpected response." });
+        }
 
         if (!upstreamResponse.ok || result.success !== true) {
-            console.error("Contact form Apps Script request failed.");
+            console.error(
+                `Contact form Apps Script request failed (HTTP ${upstreamResponse.status}): ${result.message || "unknown error"}`
+            );
             return response.status(502).json({ message: "We could not send your message. Please try again later." });
         }
 
         return response.status(200).json({ message: "Thanks. Your message has been sent." });
     } catch (error) {
-        console.error("Contact form forwarding failed:", error.message);
+        console.error("Contact form forwarding failed:", error.name, error.message);
         return response.status(502).json({ message: "We could not send your message. Please try again later." });
     }
 };

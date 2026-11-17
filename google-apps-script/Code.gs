@@ -42,6 +42,7 @@ function doPost(event) {
 
     return jsonResponse({ success: true });
   } catch (error) {
+    console.error('Contact submission failed: ' + error.message);
     return jsonResponse({ success: false, message: 'Unable to save submission' });
   }
 }
