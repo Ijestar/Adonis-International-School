@@ -36,6 +36,19 @@ form{
     border-bottom: 1px solid var(--primaryColor);
 }
 
+.formStatus{
+    min-height: 1.5em;
+    margin: 0;
+}
+
+.formStatus[data-state="error"]{
+    color: #b42318;
+}
+
+.formStatus[data-state="success"]{
+    color: #18794e;
+}
+
 
 .sideCard{
     background-color: var(--primaryColor);

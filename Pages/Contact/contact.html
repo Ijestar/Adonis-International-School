@@ -17,21 +17,22 @@
     <main>
         <h1>Contact</h1>
         <div class="formContainer">
-            <form action="">
+            <form action="/api/contact" method="post" id="contact-form">
                 <div class="inputGroup">
                     <label for="name">Full name</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" autocomplete="name" maxlength="100" required>
                 </div>
 
                 <div class="inputGroup">
                     <label for="email">Email address</label>
-                    <input type="text" id="name" name="name">
+                    <input type="email" id="email" name="email" autocomplete="email" maxlength="254" required>
                 </div>
 
                 <div class="inputGroup">
-                    <label for="massages">Massages</label>
-                    <textarea name="messages" id="massages" rows="10"></textarea>
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="10" maxlength="5000" required></textarea>
                 </div>
+                <p class="formStatus" id="form-status" role="status" aria-live="polite"></p>
                 <button class="submit" type="submit">Submit</button>
             </form>
             <div class="sideCard">
@@ -64,6 +65,7 @@
     </main>
     <div id="footer"></div>
     <script type="module" src="/scripts/components.js"></script>
+    <script type="module" src="/scripts/contact.js"></script>
 </body>
 
 </html>
