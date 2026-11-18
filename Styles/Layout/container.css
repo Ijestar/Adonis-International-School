@@ -15,7 +15,7 @@ form{
     flex-direction: column;
     gap: 1.5em;
     margin-top: 2em;
-    min-width: 500px;
+    width: min(500px, 100%);
 }
 
 .inputGroup{
@@ -93,10 +93,73 @@ form{
 .iconOutline{
     width: 40px;
     height: 40px;
+    flex: 0 0 40px;
     background-color: var(--bgColor);
     border-radius: 50%;
     display: grid;
     place-content: center;
     color: var(--primaryColor);
 
+}
+
+@media screen and (max-width: 900px){
+    .formContainer{
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    form{
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .sideCard{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .formContainer{
+        gap: 2rem;
+    }
+
+    .inputGroup input,
+    .inputGroup textarea{
+        width: 100%;
+        min-width: 0;
+        font-size: 1.6rem;
+    }
+
+    .inputGroup input{
+        height: 4.4rem;
+    }
+
+    .inputGroup textarea{
+        resize: vertical;
+    }
+
+    .sideCard{
+        border-radius: 1.8rem;
+        padding: 1.2rem;
+    }
+
+    .actionDetails{
+        padding: 2.4rem 1.2rem;
+        border-radius: 1.2rem;
+    }
+
+    .icons{
+        gap: 1.5rem;
+    }
+
+    .iconGroup{
+        align-items: center;
+        min-width: 0;
+    }
+
+    .iconGroup a{
+        min-width: 0;
+        overflow-wrap: anywhere;
+        font-size: 1.1rem;
+    }
 }
